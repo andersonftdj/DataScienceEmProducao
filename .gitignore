@@ -1,2 +1,5 @@
 # Extensions 
 *.csv
+
+# Paths
+*.ipynb_checkpoints
