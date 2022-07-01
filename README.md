@@ -140,15 +140,10 @@ Esses foram os resultados usando 5 iterações no Cross Validation:
 Apesar da superioridade da Random Forest regressor fornecendo um menor valor de erro, o modelo escolhido para as próximas etapas foi a XGBost Regressor, por dois motivos. Primeiro pelo fato da diferença de erros em ambas ser relativamente baixo, e segundo pelo fato de que modelos do tipo Random Forest tem um tamanho final muito grande, o que ocasionaria um alto custo para empresa mantê-lo em produção.
 
 #### 8. Ajuste fino de Hiperparâmetros.
-Nesta etapa buscamos encontrar o conjunto de parâmetros que maximizam o aprendizado do modelo. Para isso usamos a técnica de Random Search. Nesta técnica fornecemos um conjunto de possíveis parâmetros e
+Nesta etapa buscamos encontrar o conjunto de parâmetros que maximizam o aprendizado do modelo. Para isso usamos a técnica de _Random Search_. Nesta técnica fornecemos um conjunto de valores para todos os parâmetros que queremos testar, o modelo seleciona aleatóriamento esses valores, treina o moedelo e retorna o conjunto de valores treinados. Com esse resultado conseguimos checar a precisão e ver qual a melhor combinação que gerou os melhores resultados.
+Esta técnica foi escolhida principalmente pela seu velocidade, baixo custo e facilidade de implementação.
 
-//// CONTINUAR DAQUI ^
-
-ele vai rodando selecionando valores aleatórios desse cojnunto para compor os parametros e retorna o conjunto que teve uma melhor avaliação;
-
-
-
-Desempenho do modelo final
+O modelo com o melhor desempenho retornou os seguintes resultados:
 
 |Model Name|	MAE|	MAPE|	RMSE|
 |--|--|--|--|
@@ -156,8 +151,57 @@ Desempenho do modelo final
 
 
 
+#### 9. Interpretação e Traduação do erro
+
+Com o modelo já treinado e com todas as métricas disponíveis, podemos sair um pouco do universo técnico e demonstrar quão bom é o nosso modelo com resultados financeiros de sua aplicação.
+
+Como retorno da previsão temos o número da loja, o valor previsto de faturamento, o valor faturado no pior cenário e o valor faturado para o melhor cenário, os erros em valores absolutos e o percentual deles.
+
+store|	predictions|	worst_scenario|	best_scenario|	MAE|	MAPE|
+--|--|--|--|--|--|
+782|	211271.76|	210603.91|	211939.61|	667.85|	0.19%
+
+Com a soma de todas as lojas disponíveis temos o resultado financeiro total que este modelo retornará.
+
+Scenario|	Values
+--|--
+predictions | R$285,130,112.00
+worst_scenario	| R$284,399,916.22
+best_scenario| 	R$285,860,331.71
+
+
+Como podemos ver a seguir, as previsões do modelo ficaram muito perto dos dados reais, o que mostra o quão preciso nosso modelo foi.
+
+<p align="center"><img width="100" src="https://miro.medium.com/max/494/0*tA5OjppLK627FfFo"></p>
+------------->foto do erro da seção 9.3M Machine Learning Model
+
+
+Apesar dos ótimos resultados, sempre é possível melhorar. Como próximas sprints do CRISP-DM poderia ser buscado analisar caso a caso, ou talvez um grupo menor de lojas, para melhorar o desempenho. Ou até mesmo tentar outros tipos de modelos. 
+
+#### 10. Deploy
+Seguindo o projeto de fornecer essas previsões de uma maneirá fácil e rápida para os tomadores de decisão da Rossmann, foi feito um bot no telegram para essas consultas. Uma vez que o ID da loja seja fornecido via chat para o bot, a API do telegram entregará esses valores para o handler(arquivo principal que gerencia o funcionamento do backend do bot),  e este direcionará para o modelo, que retornará os valores da predição.
+
+<p align="center"><img width="100" src="https://miro.medium.com/max/494/0*tA5OjppLK627FfFo"></p>
+------------->Foto ou gif do bot com algumas resposta
 
 
 
+Para acessar o bot pesquise no seu Telegram @Rossmann_user_bot e clique em "Start"
+ após isso basta enviar o número da loja que deseja saber a previsão e o modelo retornará com o valor previsto.
+ 
+ 
+Com isso se encerra um ciclo de projeto de ponta a ponta, passando desde o entendimento de negócio até o deploy. Em síntese, desde a concepção da ideia, passando pelo planejamento da solução até uma entrega que agregue valor!
+
+⚡️ Próximos passos:
+ - Como o número de pessoas afeta diretamente o faturamento do dia, realizar uma previsão da quantidade de clientes que terá no dia agregaria como uma nova feature para este projeto.
+ - Usar uma tecnica mais sofisticada de fine tuning.
+ - Aprimorar a quantidade de informações retornadas pelo bot.
+ - Melhorar a performance do Modelo atual
+ - Testar mais tipos de modelos de Machine Learning.
+
+
+
+
+------------->Aprimorar explicação do deploy
 ##### Este é um projeto end-to-end de previsão de vendas do curso Data Science Em Produção da Comunidade de DS, ministrado pelo mestre Meigarom Lopes
 
