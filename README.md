@@ -182,7 +182,7 @@ best_scenario| 	R$285,860,331.71
 
 Como podemos ver a seguir, as previsões do modelo ficaram muito perto dos dados reais, o que mostra o quão preciso nosso modelo foi.
 
-<p align="center"><img width=800 src="https://github.com/andersonftdj/DataScienceEmProducao/blob/main/img/previsao.png"></p>
+<p align="center"><img width=800 src="https://github.com/andersonftdj/DataScienceEmProducao/blob/main/img/predicoes.png"></p>
 
 
 
