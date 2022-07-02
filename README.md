@@ -7,6 +7,10 @@ Este é um projeto end-to-end de previsão de vendas do curso Data Science Em Pr
 # <p align="center"> ROSSMANN STORE SALES PREDICTION </p> 
 
 
+<p align="center"><img width=500 src="https://github.com/andersonftdj/DataScienceEmProducao/blob/main/img/RossmannImg.jpg"></p>
+
+
+
 A Rossmann é uma rede de drogaria com mais de 3000 lojas que operam em 7 diferentes países da Europa.
 Após uma reunião com vários gerentes regionais, o CFO(Diretor Financeiro) da Rossmann solicitou uma previsão de vendas para as próximas 6 semanas. Seu objetivo é saber a previsão de faturamento dessas lojas, individualmente, para direcionar uma verba específica para reformar de apenas algumas delas.
 
@@ -87,6 +91,9 @@ Os passos utilizados foram os seguintes:
  
 #### 2. Feature Engineering - Engenharia de Features
 Uma vez entendido os dados, passamos para o levantamento das hipóteses sobre os dados. Primeiro foi desenvolvido um mapa mental detalhado com base nos agentes envolvidos e seus atributos (imagem a baixo), em seguida foram desenvolvidas novas features, com o objetivo de encontrar novas características que melhor descrevam o fenômeno que estamos tentando modelar.
+
+<p align="center"><img width=900 src="https://github.com/andersonftdj/DataScienceEmProducao/blob/main/img/mindMapHypothesis.png"></p>
+
 
 #### 3. Filtragem das variáveis
 Foram Filtrados as linhas e os atributos que não ajudam na modelagem do fenômeno ou que estão fora do escopo do problema.
@@ -175,8 +182,8 @@ best_scenario| 	R$285,860,331.71
 
 Como podemos ver a seguir, as previsões do modelo ficaram muito perto dos dados reais, o que mostra o quão preciso nosso modelo foi.
 
-<p align="center"><img width="100" src="https://miro.medium.com/max/494/0*tA5OjppLK627FfFo"></p>
-------------->foto do erro da seção 9.3M Machine Learning Model
+<p align="center"><img width=800 src="https://github.com/andersonftdj/DataScienceEmProducao/blob/main/img/previsao.png"></p>
+
 
 
 Apesar dos ótimos resultados, sempre é possível melhorar. Como próximas sprints do CRISP-DM poderia ser buscado analisar caso a caso, ou talvez um grupo menor de lojas, para melhorar o desempenho. Ou até mesmo tentar outros tipos de modelos. 
@@ -184,8 +191,7 @@ Apesar dos ótimos resultados, sempre é possível melhorar. Como próximas spri
 #### 10. Deploy
 Seguindo o projeto de fornecer essas previsões de uma maneirá fácil e rápida para os tomadores de decisão da Rossmann, foi feito um bot no telegram para essas consultas. Uma vez que o ID da loja seja fornecido via chat para o bot, a API do telegram entregará esses valores para o handler(arquivo principal que gerencia o funcionamento do backend do bot), e este direcionará para o modelo, que retornará os valores da predição.
 
-<p align="center"><img width="100" src="https://miro.medium.com/max/494/0*tA5OjppLK627FfFo"></p>
-------------->Foto ou gif do bot com algumas resposta
+<p align="center"><img width=300 src="https://github.com/andersonftdj/DataScienceEmProducao/blob/main/img/printBotTelegram.jpg"></p>
 
 
 
