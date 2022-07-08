@@ -195,16 +195,15 @@ Seguindo o projeto de fornecer essas previsões de uma maneirá fácil e rápida
 
 
 
-Para acessar o bot pesquise no seu Telegram @Rossmann_user_bot (ou use o QR Code abaixo) e clique em "Start"
+Para acessar o bot pesquise no seu Telegram @Rossmann_user_bot [(ou através nesse link)](https://t.me/rossmann_user_bot) e clique em "Start"
  após isso basta enviar o número da loja que deseja saber a previsão e o modelo retornará com o valor previsto.
  Tenha um pouco de paciência, pois a primeira requisição pode demorar alguns minutos para ser respondida.
  
- <p align="center"><img width=300 src="https://github.com/andersonftdj/DataScienceEmProducao/blob/main/img/QRCodeBotTelegram.jpeg"></p>
 
  
 Com isso se encerra um ciclo de projeto de ponta a ponta, passando desde o entendimento de negócio até o deploy. Em síntese, desde a concepção da ideia, passando pelo planejamento da solução até uma entrega que agregue valor!
 
-⚡️ Próximos passos:
+## 3. Próximos passos:
  - Como o número de pessoas afeta diretamente o faturamento do dia, seria interessante realizar uma previsão da quantidade de clientes que terá no dia. Agregaria como uma nova feature para este projeto.
  - Aprimorar a quantidade de informações retornadas pelo bot.
  - Melhorar a performance do Modelo atual testando técnicas mais sofisticadas de fine tuning.
