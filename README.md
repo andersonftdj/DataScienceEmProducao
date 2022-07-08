@@ -211,5 +211,7 @@ Com isso se encerra um ciclo de projeto de ponta a ponta, passando desde o enten
 
 
 
-
-> Este é um projeto end-to-end de previsão de vendas do curso Data Science Em Produção da Comunidade de DS, ministrado pelo mestre Meigarom Lopes
+###### Agradecimentos
+> Este é um projeto end-to-end de previsão de vendas do curso Data Science Em Produção da [Comunidade de DS](https://www.linkedin.com/company/comunidade-ds/), ministrado pelo mestre [Meigarom Lopes](https://www.linkedin.com/in/meigarom/)
+> 
+> Meus agradecimentos ao mestre Meigarom e toda a Comunidade por ter me auxiliado em vários desafios enfrentados durante o desenvolvimento deste projeto.
