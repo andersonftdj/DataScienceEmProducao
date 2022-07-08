@@ -1,5 +1,4 @@
 
-Este é um projeto end-to-end de previsão de vendas do curso Data Science Em Produção da Comunidade de DS, ministrado pelo mestre Meigarom Lopes
 
 
 
@@ -213,3 +212,4 @@ Com isso se encerra um ciclo de projeto de ponta a ponta, passando desde o enten
 
 
 
+> Este é um projeto end-to-end de previsão de vendas do curso Data Science Em Produção da Comunidade de DS, ministrado pelo mestre Meigarom Lopes
