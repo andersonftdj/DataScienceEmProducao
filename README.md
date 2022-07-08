@@ -64,7 +64,7 @@ Foram adotadas as seguintes premissas:
 
 
 
-## 2. Planejamento da Solução
+## 2. Planejamento e Desenvolvimento da Solução
 
 ### Produto Final
 Será entregue um bot no telegram que ao enviar o id da loja será retornado o valor de faturamento previsto para as próximas 6 semanas.
